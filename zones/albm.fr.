@@ -10,8 +10,8 @@ www			IN	CNAME	cname.vercel-dns.com.
 ;
 ; Les services
 ;
-ldap 		IN	CNAME	rns01.albm.fr.
+ldap		IN	CNAME	rns01.albm.fr.
 
 
 ; Google domain verification
-@		600	IN 	TXT		"google-site-verification=ad778VSGOnaBMCBe3Gpv86-qvw_zJlTR7cv6VJwXDFE"
+@		600	IN	TXT		"google-site-verification=ad778VSGOnaBMCBe3Gpv86-qvw_zJlTR7cv6VJwXDFE"
