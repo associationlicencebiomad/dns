@@ -1,0 +1,10 @@
+[project]
+name = "dns"
+version = "0.1.0"
+description = "ALBM DNS configuration"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "octodns>=1.10.0",
+    "octodns-ovh>=0.0.2",
+]
