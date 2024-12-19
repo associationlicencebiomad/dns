@@ -5,6 +5,7 @@ description = "ALBM DNS configuration"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "octodns-bind>=0.0.6",
     "octodns>=1.10.0",
     "octodns-ovh>=0.0.2",
 ]

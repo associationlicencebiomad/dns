@@ -55,12 +55,14 @@ version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "octodns" },
+    { name = "octodns-bind" },
     { name = "octodns-ovh" },
 ]
 
 [package.metadata]
 requires-dist = [
     { name = "octodns", specifier = ">=1.10.0" },
+    { name = "octodns-bind", specifier = ">=0.0.6" },
     { name = "octodns-ovh", specifier = ">=0.0.2" },
 ]
 
@@ -124,6 +126,19 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/78/19/db4cd71a837bcd32b22b6f3217152bc8ede26a44380ad4423c7f3a0c14cb/octodns-1.10.0.tar.gz", hash = "sha256:6270781fabf5b4ea7ac5d3286a2082fdd3418599d4667e5b8416b96f8d3e62d6", size = 577646 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/aa/69/d8cb67ea324e4a6b3b137cf74f7f531d28dc9fa9bd730cac8b1050cd96f7/octodns-1.10.0-py3-none-any.whl", hash = "sha256:7165cdbc0d71d9158ea0bf6b6620d74e68e84db2e80851767bae684929ae65f1", size = 102275 },
+]
+
+[[package]]
+name = "octodns-bind"
+version = "0.0.6"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "dnspython" },
+    { name = "octodns" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/2a/34/eb01c23df1f3ae07d6134a3127903bf7c84535fd6f884554d9f083a6483e/octodns-bind-0.0.6.tar.gz", hash = "sha256:c0d08dd01489dd57fd9d496b2893ea7a7b1d14ad72f116adb27245a6e902103a", size = 13548 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/d0/33/40c0db4e88b7465cfa3c574e5a2e16f69134eb9f784c6a2457dca7a2729a/octodns_bind-0.0.6-py3-none-any.whl", hash = "sha256:41883fabdb617d1db90d0bae727552a6f0166697eabf34aba6126be4aee4ba97", size = 9227 },
 ]
 
 [[package]]
