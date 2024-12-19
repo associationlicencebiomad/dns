@@ -1,0 +1,32 @@
+@ IN SOA dns19.ovh.net. tech.ovh.net. (
+    2024121913 ; Serial
+    86400       ; Refresh
+    3600       ; Retry
+    3600000    ; Expire
+    60      ; Minimum TTL
+)
+
+;
+; DNS Records
+;
+; Comme OVH ne supporte pas la modication des NS de la zone, on les commentes
+;@ 					IN	NS		dns19.ovh.net.
+;@ 					IN	NS		ns19.ovh.net.
+
+
+;
+; Mails
+;
+@ 					IN	MX	1	mail.albm.fr.
+mail 				IN	CNAME	serge.evann.dev.
+
+; Sécurité
+@ 				600 IN 	SPF		"v=spf1 mx include:_spf.google.com include:spf1.sorbonne-universite.fr ~all"
+_dmarc				IN	TXT		"v=DMARC1; p=none; rua=mailto:webmaster@albm.fr; ruf=mailto:webmaster@albm.fr; sp=none; ri=86400"
+mail._domainkey 	IN	TXT 	"v=DKIM1; h=sha256; k=rsa;" "p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwfZFMkB1WHY/sEhCBdfRdRrrISxshzv6XhCpmlb7csX1Ovj5aKnx5Po6oLv6AorOTI7+upYJ2h+3SeqwmRw7NGPSyPcKq/RqNrsAjvgVp1YTJVqvVovonFwRtSCF2epkTkWt9jObxuJcPtpDdStvBHGqvL/" "Mp2F72UoXGIHOrePLpZtaFWbn548ZO3wdwMiJsiazgjN8F8WJrhDdSLtzbByKYurNV/0Vxp02shfkeEAtw4UPYBxfNAADOii7gDBAWgTGl45ap5RsM8sdP4hKpgNtKgbcrMAUxizbZYA0bLTE3gL7SJqiETOM5jKDho1fPBD1rPgim9v2kfDiLDVG0QIDAQAB"
+
+
+;
+; Les serveurs
+;
+rns01 				IN	A		80.67.190.216

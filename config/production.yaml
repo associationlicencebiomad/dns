@@ -1,0 +1,23 @@
+manager:
+  include_meta: True
+
+providers:
+  zonefile:
+    class: octodns_bind.ZoneFileSource
+    directory: ./zones
+    # We do not check that the configuration is valid since OVH does not support all the requirements
+    check_origin: false
+
+  ovh:
+    class: octodns_ovh.OvhProvider
+    endpoint: ovh-eu
+    application_key: env/OVH_APPLICATION_KEY
+    application_secret: env/OVH_APPLICATION_SECRET
+    consumer_key: env/OVH_CONSUMER_KEY
+
+zones:
+  albm.fr.:
+    sources:
+      - zonefile
+    targets:
+      - ovh
