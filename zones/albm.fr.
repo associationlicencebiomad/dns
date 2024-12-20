@@ -11,6 +11,7 @@ www			IN	CNAME	cname.vercel-dns.com.
 ; Les services
 ;
 ldap		IN	CNAME	rns01.albm.fr.
+passwords	IN	CNAME	rns01.albm.fr.
 
 
 ; Google domain verification
