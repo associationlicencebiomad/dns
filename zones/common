@@ -17,8 +17,7 @@
 ;
 ; Mails
 ;
-@ 					IN	MX	1	mail.albm.fr.
-mail				IN	A		141.94.115.52
+@ 					IN	MX	1	rns01.albm.fr.
 
 ; Sécurité
 @				600	IN	SPF		"v=spf1 mx include:_spf.google.com include:spf1.sorbonne-universite.fr ~all"
