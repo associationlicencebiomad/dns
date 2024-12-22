@@ -29,3 +29,4 @@ default._domainkey	IN	TXT		"v=DKIM1; h=sha256; k=rsa; " "p=MIIBIjANBgkqhkiG9w0BA
 ; Les serveurs
 ;
 rns01				IN	A		80.67.190.216
+rns01				IN	AAAA	2a00:5884:822a::1
