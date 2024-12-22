@@ -22,7 +22,7 @@
 ; Sécurité
 @				600	IN	SPF		"v=spf1 mx include:_spf.google.com include:spf1.sorbonne-universite.fr ~all"
 _dmarc				IN	TXT		"v=DMARC1; p=none; rua=mailto:webmaster@albm.fr; ruf=mailto:webmaster@albm.fr; sp=none; ri=86400"
-mail._domainkey		IN	TXT		"v=DKIM1; h=sha256; k=rsa;" "p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwfZFMkB1WHY/sEhCBdfRdRrrISxshzv6XhCpmlb7csX1Ovj5aKnx5Po6oLv6AorOTI7+upYJ2h+3SeqwmRw7NGPSyPcKq/RqNrsAjvgVp1YTJVqvVovonFwRtSCF2epkTkWt9jObxuJcPtpDdStvBHGqvL/" "Mp2F72UoXGIHOrePLpZtaFWbn548ZO3wdwMiJsiazgjN8F8WJrhDdSLtzbByKYurNV/0Vxp02shfkeEAtw4UPYBxfNAADOii7gDBAWgTGl45ap5RsM8sdP4hKpgNtKgbcrMAUxizbZYA0bLTE3gL7SJqiETOM5jKDho1fPBD1rPgim9v2kfDiLDVG0QIDAQAB"
+default._domainkey	IN	TXT		"v=DKIM1; h=sha256; k=rsa; " "p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA3fu/w3bk6e7CN+Oqfki2H914CGU3hQotR3z+UArvAQ1QYzrsSTEKnNJrkTBXfRXh2iTtwjOYl84OmAR/vuHEHwes8GwyHQcJxmIgeTWsjIt/o6GAJM0TwUTTzrLGUJ0ao63mqLYZJdrFca+4MumPtgKAgb8VOT10baFjB+8RvbY849DTg2JT9x9jhTJt/bjASaXb2J02bmRjiH" "40xzv6VtzyQ15x7NJCiA446ROqbX/8bOcikjSuH7+Db7yUr7SWRBcygdrrwm4e950mWuxFXjEqx68X148eETQydfjpwgr9PTWvpTl+9KAnYs3fxoBgzPq6mlTsVs1GEZyAJ807BQIDAQAB"
 
 
 ;
