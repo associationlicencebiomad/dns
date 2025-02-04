@@ -10,19 +10,33 @@
 ; DNS Records
 ;
 ; Comme OVH ne supporte pas la modication des NS de la zone, on les commentes
-;@						IN	NS		dns19.ovh.net.
-;@						IN	NS		ns19.ovh.net.
+;@						IN	NS			dns19.ovh.net.
+;@						IN	NS			ns19.ovh.net.
 
 
 ;
 ; Mails
 ;
-@ 					IN	MX	1	rns01.albm.fr.
+@ 					IN	MX		10		rns01.albm.fr.
+mail 				IN	CNAME			rns01.albm.fr.
+autoconfig			IN	CNAME			rns01.albm.fr.
+autodiscover		IN	CNAME			rns01.albm.fr.
 
-; Sécurité
-@				600	IN	SPF		"v=spf1 mx include:_spf.google.com include:spf1.sorbonne-universite.fr ~all"
-_dmarc				IN	TXT		"v=DMARC1; p=none; rua=mailto:webmaster@albm.fr; ruf=mailto:webmaster@albm.fr; sp=none; ri=86400"
-default._domainkey	IN	TXT		"v=DKIM1; h=sha256; k=rsa; " "p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA3fu/w3bk6e7CN+Oqfki2H914CGU3hQotR3z+UArvAQ1QYzrsSTEKnNJrkTBXfRXh2iTtwjOYl84OmAR/vuHEHwes8GwyHQcJxmIgeTWsjIt/o6GAJM0TwUTTzrLGUJ0ao63mqLYZJdrFca+4MumPtgKAgb8VOT10baFjB+8RvbY849DTg2JT9x9jhTJt/bjASaXb2J02bmRjiH" "40xzv6VtzyQ15x7NJCiA446ROqbX/8bOcikjSuH7+Db7yUr7SWRBcygdrrwm4e950mWuxFXjEqx68X148eETQydfjpwgr9PTWvpTl+9KAnYs3fxoBgzPq6mlTsVs1GEZyAJ807BQIDAQAB"
+_jmap._tcp			IN	SRV	0	1	443	rns01.albm.fr.
+_imaps._tcp			IN	SRV	0	1	993	rns01.albm.fr.
+_imap._tcp			IN	SRV	0	1	143	rns01.albm.fr.
+_pop3s._tcp			IN	SRV	0	1	995	rns01.albm.fr.
+_pop3._tcp			IN	SRV	0	1	110	rns01.albm.fr.
+_submissions._tcp	IN	SRV	0	1	465 rns01.albm.fr.
+_submission._tcp	IN	SRV	0	1	587 rns01.albm.fr.
+
+; SPF
+@				600	IN	TXT	"v=spf1 mx ra=postmaster -all"
+rns01			600	IN	TXT	"v=spf1 a ra=postmaster -all"
+; DMARC
+_dmarc				IN	TXT	"v=DMARC1; p=reject; rua=mailto:postmaster@albm.fr; ruf=mailto:postmaster@albm.fr"
+; TLS Reporting
+_smtp._tls			IN	TXT	"v=TLSRPTv1; rua=mailto:postmaster@albm.fr"
 
 
 ;

@@ -6,6 +6,12 @@ $INCLUDE "zones/common"
 webmin		IN	CNAME	cname.vercel-dns.com.
 www			IN	CNAME	cname.vercel-dns.com.
 
+;
+; DKIM keys for albm.fr.
+;
+202502e._domainkey IN TXT   "v=DKIM1; k=ed25519; h=sha256; p=mDiKS4ZtIxjilau3lklX4F9zG9IQEdRLzmdwiRCqfbs="
+202502r._domainkey IN TXT   "v=DKIM1; k=rsa; h=sha256; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2bpLGrdbxwZsQrHn+dT+gmOrm9bhMim4bL7C7vIGh0pcUkSeW+b8MQ7SIg6R/CCyDfRZ/V8qdautlttdIzTQfpJB6qWvNzKALT4lv2CVf9ICI9Gf6+7agfZYABTc7UtbLIP3xGCV9iwab6YNwmRMdA9Xq2gB6iMEVIf8SR/MpUaodTxdnCizP6Y" "0cGSgENGGxYr/UI9kiknIXuIEYFzuVaMSijJn97OrkjkzHGDqwuna50R3687+3YCGkq+cutxF559F1ETjgVDE8t6OBfDU3Hh3UU7PGMJhqTrQGlWnCkNU4XCVJYpylbj7vMpY1cL50UQR41HABQXSsbMW7XSiyQIDAQAB"
+
 
 ;
 ; Les services
